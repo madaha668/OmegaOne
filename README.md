@@ -18,29 +18,18 @@ A powerful Chrome/Brave browser extension for managing proxy configurations with
 
 1. **Download/Clone the extension**:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/madaha668/OmegaOne.git
    cd OmegaOne
    ```
 
-2. **Prepare icons** (optional but recommended):
-   - Convert the provided `icons/icon.svg` to PNG files using an online converter or ImageMagick:
-   ```bash
-   # If you have ImageMagick installed:
-   cd icons
-   convert icon.svg -resize 16x16 icon16.png
-   convert icon.svg -resize 32x32 icon32.png
-   convert icon.svg -resize 48x48 icon48.png
-   convert icon.svg -resize 128x128 icon128.png
-   ```
-
-3. **Install in Chrome/Brave**:
+2. **Install in Chrome/Brave**:
    - Open Chrome/Brave and navigate to `chrome://extensions/`
    - Enable "Developer mode" (toggle in top-right corner)
    - Click "Load unpacked"
    - Select the OmegaOne folder
    - The extension should now appear in your extensions list
 
-4. **Pin the extension**:
+3. **Pin the extension**:
    - Click the extensions icon (puzzle piece) in the toolbar
    - Find "OmegaOne Proxy Manager" and click the pin icon
 
