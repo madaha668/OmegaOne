@@ -1,0 +1,29 @@
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="64" cy="64" r="56" fill="url(#gradient)" stroke="#fff" stroke-width="4"/>
+  
+  <!-- Omega symbol (Ω) -->
+  <path d="M45 35 Q45 25 55 25 L73 25 Q83 25 83 35 L83 50 Q83 65 73 75 L70 78 L85 95 L75 95 L65 82 L63 82 L53 95 L43 95 L58 78 L55 75 Q45 65 45 50 Z" 
+        fill="white" stroke="white" stroke-width="1"/>
+  
+  <!-- Inner Omega detail -->
+  <path d="M55 35 Q55 30 60 30 L68 30 Q73 30 73 35 L73 48 Q73 58 68 63 L65 66 L68 66 Q73 61 73 50 L73 35" 
+        fill="none" stroke="#667eea" stroke-width="2"/>
+  
+  <!-- Connection dots -->
+  <circle cx="40" cy="64" r="3" fill="white"/>
+  <circle cx="88" cy="64" r="3" fill="white"/>
+  <circle cx="64" cy="40" r="3" fill="white"/>
+  <circle cx="64" cy="88" r="3" fill="white"/>
+  
+  <!-- Connection lines -->
+  <line x1="43" y1="64" x2="85" y2="64" stroke="white" stroke-width="2" opacity="0.7"/>
+  <line x1="64" y1="43" x2="64" y2="85" stroke="white" stroke-width="2" opacity="0.7"/>
+</svg>

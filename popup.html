@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OmegaOne Proxy Manager</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>OmegaOne Proxy</h1>
+      <div class="status-indicator">
+        <span id="status-text">Disabled</span>
+        <div class="toggle-switch">
+          <input type="checkbox" id="proxy-toggle" class="toggle-input">
+          <label for="proxy-toggle" class="toggle-label"></label>
+        </div>
+      </div>
+    </header>
+
+    <div class="section">
+      <h3>Quick Switch</h3>
+      <div class="proxy-nodes">
+        <select id="proxy-select">
+          <option value="">Select Proxy Node</option>
+        </select>
+        <button id="add-node-btn" class="btn btn-small">+</button>
+      </div>
+    </div>
+
+    <div class="section" id="proxy-form" style="display: none;">
+      <h3>Add/Edit Proxy Node</h3>
+      <form id="node-form">
+        <input type="hidden" id="edit-index" value="">
+        
+        <div class="form-group">
+          <label for="node-name">Name:</label>
+          <input type="text" id="node-name" placeholder="My Proxy" required>
+        </div>
+
+        <div class="form-group">
+          <label for="protocol">Protocol:</label>
+          <select id="protocol" required>
+            <option value="http">HTTP</option>
+            <option value="https">HTTPS</option>
+            <option value="socks4">SOCKS4</option>
+            <option value="socks5">SOCKS5</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="host">Host:</label>
+          <input type="text" id="host" placeholder="127.0.0.1 or proxy.example.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="port">Port:</label>
+          <input type="number" id="port" placeholder="8080" min="1" max="65535" required>
+        </div>
+
+        <div class="form-group">
+          <label for="username">Username (optional):</label>
+          <input type="text" id="username" placeholder="username">
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password (optional):</label>
+          <input type="password" id="password" placeholder="password">
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" id="save-node" class="btn btn-primary">Save</button>
+          <button type="button" id="cancel-node" class="btn btn-secondary">Cancel</button>
+          <button type="button" id="delete-node" class="btn btn-danger" style="display: none;">Delete</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="section">
+      <h3>Bypass List</h3>
+      <div class="bypass-controls">
+        <textarea id="bypass-list" placeholder="Enter domains/IPs to bypass proxy:&#10;example.com&#10;192.168.1.0/24&#10;*.local"></textarea>
+        <button id="save-bypass" class="btn btn-primary">Save Bypass List</button>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Configuration</h3>
+      <div class="config-actions">
+        <button id="export-config" class="btn btn-secondary">Export Config</button>
+        <button id="import-config" class="btn btn-secondary">Import Config</button>
+        <input type="file" id="file-input" accept=".json" style="display: none;">
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Saved Proxy Nodes</h3>
+      <div id="saved-nodes" class="saved-nodes">
+        <!-- Nodes will be populated here -->
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+{
+  "manifest_version": 3,
+  "name": "OmegaOne Proxy Manager",
+  "version": "1.0.0",
+  "description": "Advanced proxy management extension with node switching, scope control, and configuration backup",
+  
+  "permissions": [
+    "proxy",
+    "storage",
+    "activeTab",
+    "downloads"
+  ],
+
+  "host_permissions": [
+    "<all_urls>"
+  ],
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "OmegaOne Proxy Manager",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}
